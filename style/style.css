@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --white-color: hsl(0, 0%, 100%);
+
+    --stone100-color:hsl(30, 54%, 90%);
+    --stone150-color:hsl(30, 18%, 87%);
+    --stone600-color:hsl(30, 10%, 34%);
+    --stone900-color:hsl(24, 5%, 18%);
+
+    --brown800-color:hsl(14, 45%, 36%);
+    
+    --rose800-color:hsl(332, 51%, 32%);
+    --rose50-color:hsl(330, 100%, 98%);
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--stone100-color);
+    font-size: 16px;
+    margin: 50px;
+}
+
+.flex-container{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    max-width: 700px;
+    gap: 16px;
+    background-color: var(--white-color);
+}
+
+
+.receipe-image{
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+h1, h2{
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+h2{
+    color: var(--brown800-color);
+}
+
+p, li{
+    color: var(--stone600-color);
+}
+
+ul,ol{
+    padding-left: 25px;
+}
+
+b{
+    color: var(--stone600-color);
+}
+hr{
+    border:1px solid var(--stone150-color);
+    border-radius: 20px;
+}
+
+.description, .preparation, .istruction, .ingredients, .nutrition{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.preparation{
+    background-color: var(--rose50-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.preparation ul li::marker{
+    color: var(--rose800-color);
+    font-weight: 700;
+}
+
+.prep-title{
+    color: var(--rose800-color);
+}
+
+.preparation ul, .istruction ol, .ingredients ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ingredients ul li::marker{
+    color: var(--brown800-color);
+    font-weight: 700;
+}
+.ingredients ul li{
+    padding-left: 10px;
+}
+
+.istruction ol li::marker{
+    color: var(--brown800-color);
+    font-weight: 700;
+}
+.istruction ol li{
+    padding-left: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+tr:not(:nth-child(1)) td, tr:not(:nth-child(1)) th{
+    border-top: 1px solid var(--stone150-color);
+}
+th{
+    padding-left: 20px;
+}
+
+th, td{
+    text-align: left;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width:50%
+    
+}
+
+tr:nth-child(4) td, tr:nth-child(4) th{
+    padding-bottom:0px;
+}
+
+.attribution { font-size: 11px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width: 768px) {
+    body {
+        background-color: var(--white-color);
+        margin: 0px;
+    }
+    .flex-container{
+        width: 500px;
+        border-radius: 0px;
+        padding: 0px;
+    }
+
+    
+}
+
+@media (max-width: 510px) {
+    .flex-container{
+        max-width: 375px;
+    }
+
+    .receipe-image{
+        height: 200px;
+        border-radius: 0px;
+    }
+
+    .flex-container .item:not(:nth-child(1)), hr{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    
+}
