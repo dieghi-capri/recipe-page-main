@@ -141,10 +141,6 @@ tr:nth-child(4) td, tr:nth-child(4) th{
     padding-bottom:0px;
 }
 
-.attribution { font-size: 11px;}
-.attribution a { color: hsl(228, 45%, 44%); }
-
-
 @media (max-width: 768px) {
     body {
         background-color: var(--white-color);
