@@ -59,7 +59,7 @@ h2{
     color: var(--brown800-color);
 }
 
-p, li{
+p, li, th{
     color: var(--stone600-color);
 }
 
@@ -102,7 +102,7 @@ hr{
     gap: 8px;
 }
 
-.ingredients ul li::marker{
+.ingredients ul li::marker, td{
     color: var(--brown800-color);
     font-weight: 700;
 }
@@ -127,6 +127,7 @@ tr:not(:nth-child(1)) td, tr:not(:nth-child(1)) th{
 }
 th{
     padding-left: 20px;
+    font-weight: normal
 }
 
 th, td{
@@ -140,6 +141,7 @@ th, td{
 tr:nth-child(4) td, tr:nth-child(4) th{
     padding-bottom:0px;
 }
+
 
 @media (max-width: 768px) {
     body {
